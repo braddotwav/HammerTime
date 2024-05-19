@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\Ico\HammerTime.ico</ApplicationIcon>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Fonts\Poppins-Medium.ttf" />
+    <None Remove="Assets\Fonts\Poppins-Regular.ttf" />
+    <None Remove="Assets\Fonts\Poppins-SemiBold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Ico\HammerTime.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Poppins-Medium.ttf" />
+    <Resource Include="Assets\Fonts\Poppins-Regular.ttf" />
+    <Resource Include="Assets\Fonts\Poppins-SemiBold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+  </ItemGroup>
+
+</Project>

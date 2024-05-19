@@ -1,0 +1,113 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--  MAIN COLOURS  -->
+    <SolidColorBrush x:Key="Main-100" Color="#FAFCFB" />
+    <SolidColorBrush x:Key="Main-200" Color="#ECF0ED" />
+    <SolidColorBrush x:Key="Main-300" Color="#DDE4E0" />
+    <SolidColorBrush x:Key="Main-400" Color="#CFD8D2" />
+    <SolidColorBrush x:Key="Main-500" Color="#C2CCC4" />
+    <SolidColorBrush x:Key="Main-600" Color="#98A39A" />
+    <SolidColorBrush x:Key="Main-700" Color="#707971" />
+    <SolidColorBrush x:Key="Main-800" Color="#495049" />
+    <SolidColorBrush x:Key="Main-900" Color="#232622" />
+
+    <!--  ACCENT COLOURS  -->
+    <SolidColorBrush x:Key="AccentPrimary" Color="#23bb33" />
+    <SolidColorBrush x:Key="AccentActiveInner" Color="#5d3ff2" />
+    <SolidColorBrush x:Key="AccentActiveOuter" Color="#b699fd" />
+    <SolidColorBrush x:Key="AccentIdleInner" Color="#d49822" />
+    <SolidColorBrush x:Key="AccentIdleOuter" Color="#fae28b" />
+    <SolidColorBrush x:Key="AccentInActiveInner" Color="#f55433" />
+    <SolidColorBrush x:Key="AccentInActiveOuter" Color="#feb193" />
+
+    <!--  FONT  -->
+    <FontFamily x:Key="Poppins-Reg">/Assets/Fonts/#Poppins Regular</FontFamily>
+    <FontFamily x:Key="Poppins-Med">/Assets/Fonts/#Poppins Medium</FontFamily>
+    <FontFamily x:Key="Poppins-Bold">/Assets/Fonts/#Poppins SemiBold</FontFamily>
+
+    <!--  HAMMER TIME SVG PATH  -->
+    <DrawingImage x:Key="SVGHammerTime">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V128.00045 H488.06793 V0 H0 Z">
+                <DrawingGroup.Transform>
+                    <TranslateTransform X="2.25933172259829E-06" Y="0" />
+                </DrawingGroup.Transform>
+                <GeometryDrawing Brush="{StaticResource AccentPrimary}" Geometry="F1 M488.06793,128.00045z M0,0z M-2.2593317E-06,1.7507682E-07L-2.2593317E-06,128.00046 127.99993,128.00046 127.99993,74.000139 90.337634,35.585429 90.337634,39.050849C90.337464,39.768509,90.052764,40.456839,89.545954,40.964939L82.572214,47.959869C81.512844,49.021799,79.792544,49.021799,78.733174,47.959869L64.791396,33.975189C63.736346,32.916999,63.736346,31.204669,64.791396,30.146479L71.764604,23.167578C72.273264,22.657476,72.964014,22.370765,73.684384,22.370728L79.399804,22.370728C88.423104,12.045982 97.701654,10.055799 104.98428,11.021033 109.00729,11.57537 112.85439,13.026336 116.24148,15.266769L117.20679,15.966467C118.10705,16.685066 118.455,17.894058 118.07444,18.98127 117.69229,20.067162 116.66608,20.793358 115.51491,20.792529 108.24853,20.792529 102.69018,22.869389 98.639454,25.342119L127.99993,54.000319 127.99993,1.7507682E-07z M50.431546,22.043099A42.000002,42.000005,75,0,1,53.391576,22.153687L54.222526,25.643399 59.647006,26.676409 59.647006,31.326249 56.676646,34.425809 61.455166,36.233969 61.713546,40.883809 67.009344,42.046019 67.396404,46.825049 73.854404,49.279169 75.017124,56.899369 80.183214,53.929009 82.895714,59.482679 87.287174,56.253419 93.080624,55.829669A42.000002,42.000005,75,0,1,11.431342,74.870369A42.000002,42.000005,75,0,1,50.431546,22.043099z M42.671296,39.326279A2.6250009,2.6250011,75,0,0,40.814566,42.539009L48.288006,70.430329A2.6249998,2.625,75,0,0,50.155596,72.288609L70.622044,77.674849A2.6249998,2.625,75,0,0,71.957874,72.599189L52.964726,67.600529 45.885566,41.180439A2.6250009,2.6250011,75,0,0,44.029356,39.326279A2.6250009,2.6250011,75,0,0,42.671296,39.326279z" />
+                <GeometryDrawing Brush="{StaticResource AccentPrimary}" Geometry="F1 M488.06793,128.00045z M0,0z M192.33202,0.00023417508L192.33202,54.000209 177.31926,54.000209 177.31926,32.323619 159.01289,32.323619 159.01289,54.000209 144.00013,54.000209 144.00013,0.00023417508 159.01289,0.00023417508 159.01289,20.298096 177.31926,20.298096 177.31926,0.00023417508z M235.07243,45.191699L215.9235,45.191699 213.01286,54.000209 197.23415,54.000209 216.91924,0.00023417508 234.22987,0.00023417508 253.83837,54.000209 237.98306,54.000209z M231.31924,33.702339L225.49796,16.238523 219.75329,33.702339z M321.7787,0.00023417508L321.7787,54.000209 306.76594,54.000209 306.76594,24.204479 296.57871,54.000209 284.01702,54.000209 273.75319,23.974689 273.75319,54.000209 258.74043,54.000209 258.74043,0.00023417508 276.89362,0.00023417508 290.45106,35.081069 303.70211,0.00023417508z M393.39563,0.00023417508L393.39563,54.000209 378.38288,54.000209 378.38288,24.204479 368.19565,54.000209 355.63395,54.000209 345.37013,23.974689 345.37013,54.000209 330.35737,54.000209 330.35737,0.00023417508 348.51055,0.00023417508 362.06799,35.081069 375.31905,0.00023417508z M416.98707,12.02576L416.98707,20.834265 434.2211,20.834265 434.2211,32.247029 416.98707,32.247029 416.98707,41.974679 436.51898,41.974679 436.51898,54.000209 401.97431,54.000209 401.97431,0.00023417508 436.51898,0.00023417508 436.51898,12.02576z M471.29347,54.000209L460.57007,34.085319 458.96156,34.085319 458.96156,54.000209 443.9488,54.000209 443.9488,0.00023417508 467.61687,0.00023417508Q474.12751,0.00023417508 478.64665,2.2981052 483.1658,4.5193812 485.46367,8.5023572 487.76154,12.408738 487.76154,17.310863 487.76154,22.825754 484.69772,27.038519 481.71048,31.174689 475.88921,32.936389L488.06793,54.000209z M458.96156,23.821499L466.39134,23.821499Q469.45517,23.821499 470.98708,22.366179 472.519,20.910861 472.519,18.153416 472.519,15.549162 470.91049,14.093844 469.37857,12.561929 466.39134,12.561929L458.96156,12.561929z" />
+                <GeometryDrawing Brush="{StaticResource AccentPrimary}" Geometry="F1 M488.06793,128.00045z M0,0z M187.65968,74.000199L187.65968,85.949129 173.25969,85.949129 173.25969,128.00018 158.24693,128.00018 158.24693,85.949129 144.00013,85.949129 144.00013,74.000199z M208.26393,74.000199L208.26393,128.00018 193.25117,128.00018 193.25117,74.000199z M279.88096,74.000199L279.88096,128.00018 264.8682,128.00018 264.8682,98.204449 254.68097,128.00018 242.11927,128.00018 231.85545,97.974659 231.85545,128.00018 216.84269,128.00018 216.84269,74.000199 234.99587,74.000199 248.55331,109.08104 261.80437,74.000199z M303.47239,86.025729L303.47239,94.834239 320.70643,94.834239 320.70643,106.247 303.47239,106.247 303.47239,115.97465 323.0043,115.97465 323.0043,128.00018 288.45964,128.00018 288.45964,74.000199 323.0043,74.000199 323.0043,86.025729z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+
+    <!--  BUTTONS  -->
+    <Style x:Key="PrimaryButton" TargetType="Button">
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="{StaticResource Poppins-Reg}" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Rectangle
+                            x:Name="Underline"
+                            Width="auto"
+                            Height="1.8"
+                            Margin="0,0,0,-5"
+                            VerticalAlignment="Bottom"
+                            Fill="{Binding Path=Foreground, RelativeSource={RelativeSource TemplatedParent}}"
+                            Visibility="Hidden" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand" />
+                            <Setter TargetName="Underline" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  LABEL  -->
+    <Style x:Key="PrimaryLabel" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource Poppins-Reg}" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <!--  DATA GRID  -->
+    <Style x:Key="PrimaryDataGridCol" TargetType="DataGridColumnHeader">
+        <Setter Property="FontFamily" Value="{StaticResource Poppins-Reg}" />
+        <Setter Property="Margin" Value="0,0,0,12" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+    <Style x:Key="PrimaryDataGridRow" TargetType="DataGridRow">
+        <Setter Property="Height" Value="38" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Background" Value="{StaticResource Main-200}" />
+        <Setter Property="FontFamily" Value="{StaticResource Poppins-Reg}" />
+        <Setter Property="Margin" Value="0,0,0,10" />
+        <Setter Property="FontSize" Value="14" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource Main-300}" />
+            </Trigger>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{StaticResource AccentPrimary}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="PrimaryDataGridCell" TargetType="DataGridCell">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+</ResourceDictionary>
