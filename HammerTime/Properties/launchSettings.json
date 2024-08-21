@@ -5,11 +5,11 @@
     },
     "Launch HammerPlusPlus": {
       "commandName": "Project",
-      "commandLineArgs": "--launch \"E:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\bin\\win64\\hammerplusplus.exe\""
+      "commandLineArgs": "--hammer=\"E:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\bin\\win64\\hammerplusplus.exe\""
     },
     "Launch Hammer": {
       "commandName": "Project",
-      "commandLineArgs": "--launch \"E:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\bin\\hammer.exe\""
+      "commandLineArgs": "--hammer \"E:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\bin\\hammer.exe\" --launchonstart"
     }
   }
 }

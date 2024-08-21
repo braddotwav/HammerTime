@@ -55,7 +55,7 @@
                     FontSize="16"
                     Foreground="{StaticResource AccentPrimary}"
                     Style="{StaticResource PrimaryButton}"
-                    Visibility="{Binding LauncherModel.CanLaunch, Converter={StaticResource InvertableBooleanToVisibility}, ConverterParameter=Normal}" />
+                    Visibility="{Binding CanLaunch, Converter={StaticResource InvertableBooleanToVisibility}, ConverterParameter=Normal}" />
                 <Button
                     Command="{Binding OpenProjectsWindowCommand}"
                     Content="View Sessions"
@@ -82,7 +82,7 @@
                 FontFamily="{StaticResource Poppins-Med}"
                 FontSize="124"
                 Foreground="{StaticResource Main-900}"
-                Text="{Binding TimerModel.ElapsedTime, UpdateSourceTrigger=PropertyChanged, StringFormat=hh\\:mm\\:ss}" />
+                Text="{Binding ElapsedTime, StringFormat=hh\\:mm\\:ss}" />
         </Grid>
 
         <!--  FOOTER  -->
@@ -102,15 +102,15 @@
                         <Ellipse.Style>
                             <Style TargetType="Ellipse">
                                 <Style.Triggers>
-                                    <DataTrigger Binding="{Binding TimerModel.Status}" Value="Idle">
+                                    <DataTrigger Binding="{Binding Status}" Value="IDLE">
                                         <Setter Property="Fill" Value="{StaticResource AccentIdleInner}" />
                                         <Setter Property="Stroke" Value="{StaticResource AccentIdleOuter}" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Binding TimerModel.Status}" Value="InActive">
+                                    <DataTrigger Binding="{Binding Status}" Value="INACTIVE">
                                         <Setter Property="Fill" Value="{StaticResource AccentInActiveInner}" />
                                         <Setter Property="Stroke" Value="{StaticResource AccentInActiveOuter}" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Binding TimerModel.Status}" Value="Active">
+                                    <DataTrigger Binding="{Binding Status}" Value="ACTIVE">
                                         <Setter Property="Fill" Value="{StaticResource AccentActiveInner}" />
                                         <Setter Property="Stroke" Value="{StaticResource AccentActiveOuter}" />
                                     </DataTrigger>
@@ -120,7 +120,7 @@
                     </Ellipse>
                     <Label
                         Padding="10,0"
-                        Content="{Binding TimerModel.Status}"
+                        Content="{Binding Status}"
                         FontFamily="{StaticResource Poppins-Reg}"
                         FontSize="13"
                         Foreground="{StaticResource Main-600}" />

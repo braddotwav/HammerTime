@@ -1,10 +1,9 @@
-﻿namespace HammerTime.Views
+﻿namespace HammerTime.Views;
+
+public interface IWindowFactory
 {
-    internal interface IWindowFactory
-    {
-        public event Action OnWindowOpened;
-        public event Action OnWindowClosed;
-        public bool IsOpen { get; }
-        public void Open(object dataContext);
-    }
+    public event Action OnWindowOpened;
+    public event Action OnWindowClosed;
+    public bool IsOpen { get; }
+    public void Open(object dataContext);
 }

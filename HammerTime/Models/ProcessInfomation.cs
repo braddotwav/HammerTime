@@ -1,8 +1,15 @@
-﻿namespace HammerTime.Models
+﻿namespace HammerTime.Models;
+
+internal sealed class ProcessInfomation
 {
-    internal class ProcessInfomation (string name, string title)
+    public string Name { get; }
+    public string WindowTitle { get; }
+    public bool RecentlyFocused { get; }
+
+    public ProcessInfomation(string name, string title, bool recentlyFocused)
     {
-        public string Name { get; } = name;
-        public string WindowTitle { get; } = title;
+        Name = name;
+        WindowTitle = title;
+        RecentlyFocused = recentlyFocused;
     }
 }

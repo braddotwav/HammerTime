@@ -1,19 +1,15 @@
 ﻿using HammerTime.Commands.Base;
 using System.Windows.Controls;
 
-namespace HammerTime.Commands
+namespace HammerTime.Commands;
+
+internal sealed class DeselectDataGridRowCommand : CommandBase
 {
-    class DeselectDataGridRowCommand : CommandBase
+    public override void Execute(object? parameter)
     {
-        public override void Execute(object? parameter)
+        if (parameter is DataGrid grid && grid.SelectedItems != null)
         {
-            if (parameter != null)
-            {
-                if (parameter is DataGrid grid && grid.SelectedItems != null)
-                {
-                    grid.UnselectAll();
-                }
-            }
+            grid.UnselectAll();
         }
     }
 }

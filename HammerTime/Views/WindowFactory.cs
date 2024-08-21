@@ -1,34 +1,33 @@
 ﻿using System.Windows;
 
-namespace HammerTime.Views
+namespace HammerTime.Views;
+
+internal abstract class WindowFactory : IWindowFactory
 {
-    internal abstract class WindowFactory : IWindowFactory
+    public bool IsOpen { get; private set; }
+    public Window? Window { get; private set; }
+
+    public event Action? OnWindowOpened;
+    public event Action? OnWindowClosed;
+
+    public abstract Window CreateNewWindowInstance();
+
+    public void Open(object dataContext)
     {
-        public Window? Window { get; private set; }
+        Window = CreateNewWindowInstance();
+        Window.DataContext = dataContext;
 
-        public event Action? OnWindowOpened;
-        public event Action? OnWindowClosed;
+        Window.Closed += WindowClosed;
 
-        public bool IsOpen { get; private set; }
-        public abstract Window CreateNewWindowInstance();
+        IsOpen = true;
+        OnWindowOpened?.Invoke();
+        Window.Show();
+    }
 
-        public void Open(object dataContext)
-        {
-            Window = CreateNewWindowInstance();
-            Window.DataContext = dataContext;
-
-            Window.Closed += WindowClosed;
-
-            IsOpen = true;
-            OnWindowOpened?.Invoke();
-            Window.Show();
-        }
-
-        private void WindowClosed(object? sender, EventArgs e)
-        {
-            IsOpen = false;
-            OnWindowClosed?.Invoke();
-            Window.Closed -= WindowClosed;
-        }
+    private void WindowClosed(object? sender, EventArgs e)
+    {
+        IsOpen = false;
+        OnWindowClosed?.Invoke();
+        Window!.Closed -= WindowClosed;
     }
 }

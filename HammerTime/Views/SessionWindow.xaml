@@ -1,26 +1,30 @@
 ﻿<Window
-    x:Class="HammerTime.Views.ViewProjectsWindow"
+    x:Class="HammerTime.Views.SessionWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:HammerTime.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Projects"
+    Title="Sessions"
     Width="680"
-    Height="auto"
+    Height="250"
     MinWidth="680"
+    MinHeight="250"
+    MaxHeight="400"
     AllowsTransparency="False"
     Background="{StaticResource Main-200}"
     SizeToContent="Height"
     WindowStartupLocation="CenterScreen"
     WindowStyle="ThreeDBorderWindow"
     mc:Ignorable="d">
+
     <Window.InputBindings>
         <MouseBinding
             Command="{Binding DeselectDataGridRowCommand}"
             CommandParameter="{Binding ElementName=ProjectDataGrid}"
             MouseAction="LeftClick" />
     </Window.InputBindings>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -28,15 +32,44 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel Margin="18">
+        <Grid Grid.Row="0" Margin="18">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
             <Label
-                Padding="0"
-                Content="PROJECTS"
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Content="SESSIONS"
                 FontFamily="{StaticResource Poppins-Bold}"
                 FontSize="26"
                 Foreground="{StaticResource AccentPrimary}"
                 Style="{StaticResource PrimaryLabel}" />
-        </StackPanel>
+
+            <StackPanel
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <Button
+                    Margin="0,0,15,0"
+                    Command="{Binding DeleteSelectedProjectsCommand}"
+                    Content="Delete Selected"
+                    FontSize="16"
+                    Foreground="{StaticResource AccentPrimary}"
+                    IsEnabled="{Binding IsProjectSelected}"
+                    Style="{StaticResource PrimaryButton}" />
+                <Button
+                    Margin="0,0,15,0"
+                    Command="{Binding DeleteAllProjectsCommand}"
+                    Content="Delete All"
+                    FontSize="16"
+                    Foreground="{StaticResource AccentPrimary}"
+                    IsEnabled="{Binding ElementName=ProjectDataGrid, Path=HasItems}"
+                    Style="{StaticResource PrimaryButton}" />
+            </StackPanel>
+        </Grid>
 
         <!--  SEPERATOR  -->
         <Grid
@@ -48,12 +81,12 @@
         <DataGrid
             x:Name="ProjectDataGrid"
             Grid.Row="2"
-            Margin="16"
+            Margin="18"
             AutoGenerateColumns="False"
             Background="Transparent"
             BorderBrush="Transparent"
             CanUserAddRows="False"
-            CanUserDeleteRows="True"
+            CanUserDeleteRows="False"
             CanUserReorderColumns="False"
             CanUserResizeColumns="False"
             CanUserResizeRows="False"
@@ -63,9 +96,11 @@
             GridLinesVisibility="None"
             HeadersVisibility="Column"
             IsReadOnly="False"
-            ItemsSource="{Binding ProjectData, UpdateSourceTrigger=PropertyChanged}"
+            ItemsSource="{Binding ProjectData}"
             KeyboardNavigation.TabNavigation="None"
             RowStyle="{StaticResource PrimaryDataGridRow}"
+            SelectedItem="{Binding SelectedProject, Mode=TwoWay}"
+            SelectionMode="Single"
             SelectionUnit="FullRow">
             <DataGrid.InputBindings>
                 <KeyBinding
@@ -77,17 +112,17 @@
                 <DataGridTextColumn
                     Width="*"
                     Binding="{Binding Name}"
-                    Header="Name"
+                    Header="NAME"
                     IsReadOnly="True" />
                 <DataGridTextColumn
                     Width="*"
                     Binding="{Binding TimeSpent, StringFormat=hh\\:mm\\:ss}"
-                    Header="Time Spent"
+                    Header="TIME SPENT"
                     IsReadOnly="True" />
                 <DataGridTextColumn
                     Width="*"
                     Binding="{Binding LastOpenDate, StringFormat=dddd\\ dd\\ MMMM\\ yyyy}"
-                    Header="Last Opened"
+                    Header="LAST OPENED"
                     IsReadOnly="True" />
             </DataGrid.Columns>
         </DataGrid>

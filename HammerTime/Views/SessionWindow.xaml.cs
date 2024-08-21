@@ -2,17 +2,17 @@
 
 namespace HammerTime.Views
 {
-    internal class ViewProjectWindowFactory : WindowFactory
+    internal class SessionWindowFactory : WindowFactory
     {
         public override Window CreateNewWindowInstance()
         {
-            return new ViewProjectsWindow();
+            return new SessionWindow();
         }
     }
 
-    public partial class ViewProjectsWindow : Window
+    public partial class SessionWindow : Window
     {
-        public ViewProjectsWindow()
+        public SessionWindow()
         {
             InitializeComponent();
         }
