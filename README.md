@@ -1,20 +1,26 @@
-<img src="Media/hammertime_appicon.png" alt="Logo" width="64" height="64" />
+<img src="Media/hammertime_appicon.png" alt="hammertime" width="64" height="64" />
 
 Hammer Time is a tool designed for creators using Valve's Hammer Editor, providing per-project usage statistics and streamlining the launch process.
 
-A screenshot of the application can be found in the [Media](https://github.com/braddotwav/HammerTime/tree/main/Media) section of the repository.
-
 Supports both Hammer & Hammer Plus Plus
+
+---------
+<br>
+
+<img src="Media/hammertime_conbined.png" alt="mainwindow" width="512" />
 
 Download
 ---------
 You can grab the latest version from the [release section](https://github.com/braddotwav/HammerTime/releases)
 
-Commands
+Arguments
 ---------
-Pass the following commands as arguments when launching Hammer Time
+HammerTime supports several optional arguments that you can use to tailor the experience to your preferences.
 
-``` --launch "{HAMMER DIRECTORY}" ``` - Will cause Hammer to launch when opening Hammer Time, and a launch button will be added to the UI for reopening Hammer if it has been closed.
+| Argument                    | Description                                    |
+|:----------------------------|:-----------------------------------------------|
+| `--hammer=PATH`            | The path to the Hammer executable. Once set, HammerTime will display a launch button in the application. |
+| `--launchonstart`               | When used in conjunction with the ```--hammer``` command, this option will automatically launch Hammer as soon as HammerTime starts. |
 
 Questions & Issues
 ---------
@@ -24,6 +30,7 @@ Resources & Packages used
 ---------
 - [CommandLine](https://github.com/commandlineparser/commandline)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [Notification.Wpf](https://github.com/Platonenkov/Notification.Wpf)
 
 License
 ---------
