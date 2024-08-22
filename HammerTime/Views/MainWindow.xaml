@@ -57,7 +57,7 @@
                     Style="{StaticResource PrimaryButton}"
                     Visibility="{Binding CanLaunch, Converter={StaticResource InvertableBooleanToVisibility}, ConverterParameter=Normal}" />
                 <Button
-                    Command="{Binding OpenProjectsWindowCommand}"
+                    Command="{Binding OpenSessionWindowCommand}"
                     Content="View Sessions"
                     FontSize="16"
                     Foreground="{StaticResource AccentPrimary}"
