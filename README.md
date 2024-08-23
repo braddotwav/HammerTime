@@ -13,9 +13,8 @@ Download
 ---------
 You can grab the latest version from the [release section](https://github.com/braddotwav/HammerTime/releases)
 
-Arguments
+Optional Arguments
 ---------
-HammerTime supports several optional arguments that you can use to tailor the experience to your preferences.
 
 | Argument                    | Description                                    |
 |:----------------------------|:-----------------------------------------------|
