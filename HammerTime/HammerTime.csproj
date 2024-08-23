@@ -7,9 +7,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Assets\Ico\HammerTime.ico</ApplicationIcon>
-    <Version>1.0.0.0</Version>
+    <Version>1.1.0</Version>
     <PlatformTarget>x64</PlatformTarget>
     <RepositoryUrl>https://github.com/braddotwav/HammerTime</RepositoryUrl>
+    <FileVersion>1.1.0</FileVersion>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
