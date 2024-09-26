@@ -33,7 +33,7 @@ Write-Host "Starting self contained process..."
 Start-Sleep -Seconds 1
 
 # Build self-contained
-dotnet publish -p Release --runtime win-x64 --self-contained --output "./bin/self-contained"
+dotnet publish -c Release -r win-x64 --self-contained --output "./bin/self-contained"
 
 # Check if there was an error, if there was then exit
 if ($LASTEXITCODE -ne 0)
@@ -49,7 +49,7 @@ Write-Host "Starting framework dependant process..."
 Start-Sleep -Seconds 1
 
 # Build framework dependant
-dotnet publish -p Release --runtime win-x64 --no-self-contained --output "./bin/framework-dependant"
+dotnet publish -c Release -r win-x64 --no-self-contained --output "./bin/framework-dependant"
 
 # Check if there was an error, if there was then exit
 if ($LASTEXITCODE -ne 0)
