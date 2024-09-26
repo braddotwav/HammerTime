@@ -86,7 +86,7 @@ Start-Sleep -Seconds 1
 
 # Zip framework dependant
 $frameworkdependant = Join-Path -Path $output -ChildPath "hammertime-winx64-framework-dependant.zip"
-7z a -bsp2 -r $frameworkdependant "./bin/framework-dependant"
+7z a -bsp2 -r $frameworkdependant "./bin/framework-dependant/*"
 
 # Check if there was an error, if there was then exit
 if ($LASTEXITCODE -ne 0)
